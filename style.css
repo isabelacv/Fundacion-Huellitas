@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'inter'
+}
+
+/* TEXT */
+.bannertext{
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.texti{
+    height: auto;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.texte{
+    width: 85%; 
+    height: auto; 
+    font-size: 16px;
+    font-weight: 500;
+    text-align: justify;
+}
+
+.textu{
+    height: auto;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+/* NAV */
+.navbar{
+    background-color: white;
+    color: #094DD1;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 4px;
+    padding-right: 8%;
+    padding-left: 7%;
+    font-family: "Inter", serif;
+    gap: 60px;
+    border-bottom: 3px solid #094DD1;
+}
+
+.nav-link:hover {
+    color: #000 !important;
+}
+
+/* BANNER */
+
+.TEXT{
+    color: #094DD1;
+}
+
+/* INICIO NOSOTROS */
+
+.nosotrostitle{
+    color: #094DD1;
+    font-family: Inter;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.imagen{
+    width: 140px;
+    height: 300px !important; 
+    text-align: end;
+}
+
+.btn-custom {
+    color: #FFF !important; 
+    font-family: 'Inter', sans-serif; 
+    font-size: 18px; 
+    font-weight: 500;
+    background-color: #094DD1 !important; 
+    text-decoration: none;
+    border-radius: 60px; 
+    padding: 30px; 
+    border: none; 
+    cursor: pointer; 
+    width: 600px;
+}
+
+/* Efecto hover */
+.btn-custom:hover {
+    background-color: #000;
+    color: #FFF; 
+}
+
+.naveg{
+    display: block;            
+    margin-bottom: 10px;       
+    text-decoration: none;     
+    color: #000;
+    text-align: center;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+.cardnosotros{
+    background-color:#DFEDFF ;
+}
+
+/* Personalizaciones específicas */
+.btn-primary {
+    background-color: #094DD1 !important;
+    border-radius: 20px;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #073a9e !important;
+}
+
+.form-control {
+    border-radius: 20px;
+    padding: 12px 20px;
+}
+
+.form-check-input:checked {
+    background-color: #094DD1;
+    border-color: #094DD1;
+}
+
+ /* HISTORIAS */
+
+/* Estilos para las historias */
+.historia-bg {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.historia1 {
+    background-image: url('../img/Group\ 48.png');
+}
+
+.historia2 {
+    background-image: url('../img/Group\ 49.png');
+}
+
+.historia3 {
+    background-image: url('../img/Group\ 50.png');
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .historia-bg {
+        background-size: cover;
+        min-height: 300px;
+    }
+    
+    .historia-bg .text-start {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px !important;
+        border-radius: 15px;
+    }
+}
+
+/* Personalización de botones */
+.btn-primary {
+    background-color: #094DD1;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #073a9e;
+    transform: translateY(-2px);
+}
+
+/* ADOPCIONES */
+
+.animal-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 70vh; 
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.animal-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.animal-section h2 {
+    position: relative;
+    z-index: 2;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .animal-section {
+        min-height: 50vh;
+        background-position: top center;
+    }
+    
+    .animal-section h2 {
+        font-size: 2.5rem !important;
+        padding: 0 1rem;
+    }
+    
+    .animal-section::before {
+        background: rgba(0, 0, 0, 0.4);
+    }
+}
+
+
+.gatos {
+    background-image: url('./img/Rectangle\ 12.png'); /* Versión recortada para móvil */
+}
+
+.perros {
+    background-image: url('./img/Rectangle\ 11.png');
+}
+.animal-section:hover {
+    filter: brightness(1.05);
+    transform: scale(1.01);
+}
+
+/* OTROS */
+
+/* Personalización de Bootstrap */
+.bg-primary {
+    background-color: #DFEDFF !important;
+}
+
+.text-primary {
+    color: #094DD1 !important;
+}
+
+.BGBLUE{
+    background-color: #DFEDFF;
+}
+
+@media (min-width: 992px) {
+    .corre {
+        position: relative;
+        right: 110px; /* Ajusta este valor según necesites */
+    }
+}
