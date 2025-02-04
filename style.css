@@ -153,15 +153,15 @@
 }
 
 .historia1 {
-    background-image: url('../img/Group\ 48.png');
+    background-image: url('./img/Group\ 48.png');
 }
 
 .historia2 {
-    background-image: url('../img/Group\ 49.png');
+    background-image: url('./img/Group\ 49.png');
 }
 
 .historia3 {
-    background-image: url('../img/Group\ 50.png');
+    background-image: url('./img/Group\ 50.png');
 }
 
 /* Ajustes responsive */
