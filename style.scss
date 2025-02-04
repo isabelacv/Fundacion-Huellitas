@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+// Variables
+$color-primary: #094DD1;
+$color-secondary: #DFEDFF;
+$color-black: #000;
+$color-white: #FFF;
+$font-family: 'Inter', sans-serif;
+$base-padding: 16px;
+
+// Mixin para responsive
+@mixin respond-to($breakpoint) {
+@if $breakpoint == 'medium' {
+    @media (max-width: 768px) { @content; }
+}
+@else if $breakpoint == 'large' {
+    @media (min-width: 992px) { @content; }
+}
+}
+
+// Mixin para estilos de botones
+@mixin button-styles {
+    background-color: $color-primary;
+    border: none;
+    padding: calc(0.75rem + 0.1vw) calc(1.5rem + 0.2vw); 
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: #073a9e;
+        transform: translateY(-2px);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+
+/* TEXT */
+.bannertext {
+    color: $color-black;
+    text-align: center;
+    font-size: calc(25px + 0.5vw); 
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.texti {
+    height: auto;
+    font-size: calc(16px + 0.2vw); 
+    font-weight: 500;
+    text-align: center;
+}
+
+.texte {
+    width: 85%; 
+    height: auto; 
+    font-size: calc(16px + 0.2vw); 
+    font-weight: 500;
+    text-align: justify;
+}
+
+.textu {
+    height: auto;
+    font-size: calc(13px + 0.1vw);
+    font-weight: 500;
+    text-align: center;
+}
+
+/* NAV */
+.navbar {
+    background-color: $color-white;
+    color: $color-primary;
+    font-size: 14px;
+    font-weight: 700;
+    padding: calc($base-padding / 2); 
+    padding-right: calc(8% - 10px); 
+    padding-left: calc(7% - 10px); 
+    gap: 60px;
+    border-bottom: 3px solid $color-primary;
+
+    .nav-link:hover {
+        color: $color-black !important;
+    }
+}
+
+/* BANNER */
+.TEXT {
+    color: $color-primary;
+}
+
+/* INICIO NOSOTROS */
+.nosotrostitle {
+    color: $color-primary;
+    font-size: calc(40px + 1vw); 
+    font-weight: 600;
+    line-height: normal;
+}
+
+.imagen {
+    width: 140px;
+    height: calc(300px + 5vh) !important; 
+    text-align: end;
+}
+
+.btn-custom {
+    @include button-styles;
+    color: $color-white !important; 
+    font-size: calc(18px + 0.3vw); 
+    font-weight: 500;
+    border-radius: 60px; 
+    padding: calc(30px + 1vh); 
+    width: calc(600px + 10vw);
+
+    &:hover {
+        background-color: $color-black;
+    }
+}
+
+.naveg {
+    display: block;            
+    margin-bottom: 10px;       
+    text-decoration: none;     
+    color: $color-black;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.cardnosotros {
+    background-color: $color-secondary;
+}
+
+.btn-primary {
+    @include button-styles;
+    border-radius: 20px;
+
+    &:hover {
+        background-color: #073a9e !important;
+    }
+}
+
+.form-control {
+    border-radius: 20px;
+    padding: calc(12px + 0.5vh) calc(20px + 0.5vw); 
+}
+
+.form-check-input:checked {
+    background-color: $color-primary;
+    border-color: $color-primary;
+}
+
+/* HISTORIAS */
+.historia-bg {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(400px + 5vh); 
+    display: flex;
+    align-items: center;
+
+    @include respond-to('medium') {
+        background-size: cover;
+        min-height: calc(300px + 5vh); 
+        
+        .text-start {
+            background: rgba($color-white, 0.9);
+            padding: calc(20px + 1vh) !important; 
+            border-radius: 15px;
+        }
+    }
+}
+
+.historia1 {
+    background-image: url('./img/Group\ 48.png');
+}
+
+.historia2 {
+    background-image: url('./img/Group\ 49.png');
+}
+
+.historia3 {
+    background-image: url('./img/Group\ 50.png');
+}
+
+/* ADOPCIONES */
+.animal-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: calc(70vh - 50px); 
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba($color-black, 0.3);
+        z-index: 1;
+    }
+
+    @include respond-to('medium') {
+        min-height: calc(50vh - 30px); 
+        background-position: top center;
+        
+        &::before {
+            background: rgba($color-black, 0.4);
+        }
+        
+        h2 {
+            font-size: calc(2.5rem + 0.5vw) !important; 
+            padding: 0 1rem;
+        }
+    }
+
+    &:hover {
+        filter: brightness(1.05);
+        transform: scale(1.01);
+    }
+}
+
+.gatos {
+    background-image: url('./img/Rectangle\ 12.png');
+}
+
+.perros {
+    background-image: url('./img/Rectangle\ 11.png');
+}
+
+/* OTROS */
+.bg-primary {
+    background-color: $color-secondary !important;
+}
+
+.text-primary {
+    color: $color-primary !important;
+}
+
+.BGBLUE {
+    background-color: $color-secondary;
+}
+
+.corre {
+    @include respond-to('large') {
+        position: relative;
+        right: calc(110px + 5vw); 
+    }
+}
